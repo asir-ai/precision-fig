@@ -7,8 +7,8 @@ import { HiMiniArrowLongRight } from "react-icons/hi2";
 
 export default function Carousel1() {    
     return (
-        <section className="mt-50 w-full flex flex-col items-center gap-14">
-            <h2 className="text-4xl font-bold">These Humans Are The DNA Of Our Business</h2>
+        <section className="mt-20 w-full flex flex-col items-center gap-8 sm:mt-32 lg:mt-50 lg:gap-14">
+            <h2 className="text-2xl font-bold text-center sm:text-3xl lg:text-4xl">These Humans Are The DNA Of Our Business</h2>
             <div className="flex w-full">
                 <Carousel
                     opts={{
@@ -18,16 +18,16 @@ export default function Carousel1() {
                     >
                     <CarouselContent>
                         {carousel1Items.map((value, index) => (
-                        <CarouselItem key={index} className="basis-1/2 lg:basis-3/13">
+                        <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                             <div className="p-1">
-                            <Card className="group relative aspect-square w-full overflow-hidden border-0 shadow-md">
-                                <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <Card className="group relative aspect-square w-full p-0 overflow-hidden border-0 shadow-md">
+                                <CardContent className="flex aspect-square items-center justify-center p-6 relative top-0">
                                     <Image
                                         src={`/images/${value.src}.png`}
                                         alt={value.alt}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                        sizes="(max-width: 200px) 10vw, 20vw"
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" 
                                     />
 
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -39,9 +39,9 @@ export default function Carousel1() {
                     </CarouselContent>
                 </Carousel>
             </div>
-            <Button className={'bg-(--red) text-white font-semibold rounded-full text-xl p-6 flex gap-4'}>
+            <Button className={'bg-(--red) text-white font-semibold rounded-full text-base p-4 sm:text-xl sm:p-6 flex gap-3 sm:gap-4'}>
                 <span>Explore Services</span>
-                <HiMiniArrowLongRight className="scale-140" aria-hidden />
+                <HiMiniArrowLongRight className="scale-125 sm:scale-140" aria-hidden />
             </Button>
         </section>
     )

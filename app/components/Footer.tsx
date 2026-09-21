@@ -47,17 +47,18 @@ export function FooterLinkItem({ linkItem }: { linkItem: SubLink }) {
 export default function Footer() {
     return (
         <footer className="w-full">
-            <div className="wContainer flex flex-col items-center pt-16 pb-3">
-                <div className="flex flex-col items-center mb-10">
+            <div className="wContainer flex flex-col items-center pt-10 pb-3 sm:pt-16">
+                <div className="flex flex-col items-center mb-8 sm:mb-10">
                     <Link href="/">
                         <Image
                             src="/logos/precLogo.png"
                             alt="Precision Window Tinting"
                             height={50}
                             width={200}
+                            className="w-[160px] sm:w-[200px]"
                         />
                     </Link>
-                    <div className="flex gap-8 justify-between items-center mt-6">
+                    <div className="flex gap-5 sm:gap-8 justify-between items-center mt-6">
                         {SOCIAL_LINKS.map(({ href, label, icon: Icon, className }) => (
                             <a
                                 key={label}
@@ -67,7 +68,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                <Icon className="scale-200" aria-hidden />
+                                <Icon className="scale-150 sm:scale-200" aria-hidden />
                             </a>
                         ))}
                     </div>
@@ -76,11 +77,11 @@ export default function Footer() {
 
                 <hr className="w-full border-t border-t-gray-700" />
 
-                <div className="flex justify-between w-full px-12 py-14">
+                <div className="grid w-full gap-8 px-2 py-8 sm:px-6 sm:py-10 md:grid-cols-2 lg:grid-cols-4 lg:px-12 lg:py-14">
                     {footerLinks.map((column) => (
-                        <div className="flex flex-col gap-6" key={column.id}>
-                            <h2 className="text-2xl font-bold">{column.heading}</h2>
-                            <ul className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 sm:gap-6" key={column.id}>
+                            <h2 className="text-xl font-bold sm:text-2xl">{column.heading}</h2>
+                            <ul className="flex flex-col gap-3 sm:gap-4">
                                 {column.links.map((linkItem) => (
                                     <li key={`${column.id}-${linkItem.name}`}>
                                         <FooterLinkItem linkItem={linkItem} />
@@ -93,8 +94,8 @@ export default function Footer() {
 
                 <hr className="w-full border-t border-t-gray-700" />
 
-                <div className="flex items-center justify-center py-3">
-                    <p className="text-gray-300">
+                <div className="flex items-center justify-center py-3 px-4 text-center">
+                    <p className="text-gray-300 text-sm sm:text-base">
                         Copyright © 2026 Precision Window Tinting. All rights reserved.
                     </p>
                 </div>

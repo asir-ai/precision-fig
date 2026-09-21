@@ -6,11 +6,11 @@ import Comment from "./Comment";
 
 export default function Review() {
     return (
-        <section className="grid lg:grid-cols-[2fr_3fr] px-40 w-full py-42">
-            <div className="pr-42 flex flex-col gap-12 sticky top-36 h-fit">
+        <section className="grid w-full gap-8 px-4 py-12 sm:px-8 lg:grid-cols-[2fr_3fr] lg:gap-12 lg:px-40 lg:py-42">
+            <div className="flex flex-col gap-8 lg:sticky lg:top-36 lg:h-fit lg:pr-10 lg:gap-12">
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-5xl font-bold">Customer Reviews</h2>
-                    <p className="flex items-center gap-2 text-2xl">
+                    <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">Customer Reviews</h2>
+                    <p className="flex flex-wrap items-center gap-2 text-base sm:text-xl lg:text-2xl">
                         {
                             Array.from({length: 5}).map((_, index) => {
                                 return(
@@ -22,12 +22,12 @@ export default function Review() {
                     </p>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-3xl font-bold">Share Your Thoughts</h2>
-                    <p className="text-lg">If you have used our services, share your experience with others.</p>
+                    <h2 className="text-2xl font-bold sm:text-3xl">Share Your Thoughts</h2>
+                    <p className="text-base sm:text-lg">If you have used our services, share your experience with others.</p>
                 </div>
-                <Button variant={"ghost"} className={'border border-amber-50 w-full font-semibold rounded-full text-xl p-6 flex gap-4 cursor-pointer'}>
+                <Button variant={"ghost"} className={'border border-amber-50 w-full font-semibold rounded-full text-base p-4 sm:text-xl sm:p-6 flex gap-3 sm:gap-4 cursor-pointer'}>
                     <span>Write a review</span>
-                    <HiMiniArrowLongRight className="scale-140" aria-hidden />
+                    <HiMiniArrowLongRight className="scale-125 sm:scale-140" aria-hidden />
                 </Button>
                 <div className="self-center flex flex-col items-center gap-4">
                     <Image
@@ -37,7 +37,7 @@ export default function Review() {
                         width={140}
                         className="rounded-2xl"
                     />
-                    <p className="text-xl">Scan me!</p>
+                    <p className="text-lg sm:text-xl">Scan me!</p>
                 </div>
             </div>
             <div>
