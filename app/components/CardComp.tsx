@@ -6,11 +6,11 @@ import { VscLockSmall } from "react-icons/vsc"
 
 export default function CardComp() {    
     return (
-        <div className="mt-50 w-full">
+        <section className="mt-50 w-full">
             <div className="wContainer bg-[url('/images/bgImage1.png')] bg-cover bg-center py-12 px-22 flex flex-col items-center rounded-xl">
                 <div className="flex gap-112">
                     <div>
-                        <h1 className="text-4xl font-bold mb-4">Protect Now, Pay Over Time</h1>
+                        <h2 className="text-4xl font-bold mb-4">Protect Now, Pay Over Time</h2>
                         <p className="text-xl font-semibold mb-10">Premium vehicle protection shouldnt wait. Enjoy stress-free financing that fits your lifestyle so you can hit the road with confidence today.</p>
                         <div className="flex justify-between items-center">
                             {
@@ -40,10 +40,8 @@ export default function CardComp() {
                         />
                         <hr className="border-t border-t-gray-700 w-full" />
                         <Button className={'bg-(--yellow) text-black font-semibold rounded-full text-xl p-6 flex gap-4'}>
-                            <p>
-                                Get Approved Now 
-                            </p>
-                            <HiMiniArrowLongRight className="scale-140" />
+                            <span>Get Approved Now</span>
+                            <HiMiniArrowLongRight className="scale-140" aria-hidden />
                         </Button>
                         <p className="flex gap-2 whitespace-nowrap items-center"><VscLockSmall /> No impact on your credit score</p>
                     </div>
@@ -52,6 +50,6 @@ export default function CardComp() {
                     <p className="text-xl">Financing provided by Synchrony</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

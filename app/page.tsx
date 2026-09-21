@@ -5,7 +5,6 @@ import CardComp from "./components/CardComp";
 import Carousel1 from "./components/Carousel1";
 import AboutUs from "./components/AboutUs";
 import Review from "./components/Review";
-import Comment from "./components/Comment";
 
 export default function Home() {
   return (

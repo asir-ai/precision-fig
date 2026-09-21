@@ -7,8 +7,8 @@ import { HiMiniArrowLongRight } from "react-icons/hi2";
 
 export default function Carousel1() {    
     return (
-        <div className="mt-50 w-full flex flex-col items-center gap-14">
-            <h1 className="text-4xl font-bold">These Humans Are The DNA Of Our Business</h1>
+        <section className="mt-50 w-full flex flex-col items-center gap-14">
+            <h2 className="text-4xl font-bold">These Humans Are The DNA Of Our Business</h2>
             <div className="flex w-full">
                 <Carousel
                     opts={{
@@ -40,11 +40,9 @@ export default function Carousel1() {
                 </Carousel>
             </div>
             <Button className={'bg-(--red) text-white font-semibold rounded-full text-xl p-6 flex gap-4'}>
-                <p>
-                    Explore Services 
-                </p>
-                <HiMiniArrowLongRight className="scale-140" />
+                <span>Explore Services</span>
+                <HiMiniArrowLongRight className="scale-140" aria-hidden />
             </Button>
-        </div>
+        </section>
     )
 }

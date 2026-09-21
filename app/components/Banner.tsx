@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Banner() {
     return (
-        <div className="w-full bg-foreground py-8">
+        <section className="w-full bg-foreground py-8">
             <div className="flex max-w-[96vw] mx-auto justify-between text-5xl font-extrabold">
                 <div className="flex gap-4">
                     <Image
@@ -32,6 +32,6 @@ export default function Banner() {
                     <h2>PREMIUM LLUMAR FILMS</h2>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

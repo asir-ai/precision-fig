@@ -11,9 +11,9 @@ export default function Services() {
     const [carouselApi, setCarouselApi] = useState<CarouselApi>();
     
     return (
-        <div className="mt-60 w-full flex flex-col gap-8">
+        <section className="mt-60 w-full flex flex-col gap-8">
             <div className="wContainer mx-auto justify-between flex items-center">
-                <h1 className="text-4xl font-bold">What Services Do You Need?</h1>
+                <h2 className="text-4xl font-bold">What Services Do You Need?</h2>
                 <div className="flex gap-6">
                     <Button onClick={() => carouselApi?.scrollPrev()} className={'text-black p-6 rounded-sm'} variant="outline" size="icon" aria-label="Go Back">
                         <GoChevronLeft className="scale-200" />
@@ -48,9 +48,9 @@ export default function Services() {
                                     <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                                        <h1 className="text-4xl font-bold font-sans tracking-tight leading-snug text-white z-199">
+                                        <h2 className="text-4xl font-bold font-sans tracking-tight leading-snug text-white z-199">
                                         {value.h1}
-                                        </h1>
+                                        </h2>
                                         <p className="mt-2 text-xs text-zinc-300 line-clamp-4 font-inter leading-relaxed">
                                         {value.p}
                                         </p>
@@ -63,6 +63,6 @@ export default function Services() {
                     </CarouselContent>
                 </Carousel>
             </div>
-        </div>
+        </section>
     )
 }

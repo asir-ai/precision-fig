@@ -1,6 +1,8 @@
 import { IconType } from "react-icons";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuMail, LuPhone } from "react-icons/lu";
+import { FaFacebook } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
 
 export type SubLink = {
     name: string;
@@ -69,17 +71,17 @@ export const footerLinks: FooterLinks[] = [
         links: [
             {
                 name: "(307) 315-0273",
-                hrefLink: "",
+                hrefLink: "tel:+13073150273",
                 icon: LuPhone,
             },
             {
                 name: "precisionwindow2018@gmail.com",
-                hrefLink: "",
+                hrefLink: "mailto:precisionwindow2018@gmail.com",
                 icon: LuMail,
             },
             {
                 name: "550 E 1st Street Casper, WY 82601",
-                hrefLink: "",
+                hrefLink: "https://www.google.com/maps/search/?api=1&query=550+E+1st+Street+Casper,+WY+82601",
                 icon: IoLocationOutline,
             },
         ]
@@ -119,3 +121,23 @@ export const footerLinks: FooterLinks[] = [
         ]
     },
 ] 
+
+export const SOCIAL_LINKS = [
+    {
+        href: "https://www.facebook.com/",
+        label: "Follow us on Facebook",
+        icon: FaFacebook,
+        className: "bg-white rounded-full h-7.5 flex items-center text-[#1877F2]",
+    },
+    {
+        href: "https://www.youtube.com/",
+        label: "Follow us on YouTube",
+        icon: IoLogoYoutube,
+        className:
+            "bg-white rounded-full w-8 h-4 flex justify-center items-center text-[#FF0000]",
+    },
+] as const;
+
+export function isExternalHref(href: string) {
+    return /^(https?:|mailto:|tel:)/.test(href);
+}
